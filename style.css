@@ -75,3 +75,35 @@ th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
 }
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block; /* 文字の幅に合わせる */
+  
+  /* 背景にグラデーションを設定（ベース色 ＋ 光の筋） */
+  background: linear-gradient(
+    110deg,
+    #333333 35%,
+    #ffffff 50%,
+    #333333 65%
+  );
+  background-size: 200% auto;
+  
+  /* 背景を文字の形に切り抜く */
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* アニメーション設定 */
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
